@@ -4,14 +4,14 @@ import junit.framework.Assert.assertEquals
 import junit.framework.TestCase
 
 class Uren2NomeCompactoTest extends TestCase {
-  
+
     def testLabel_art1() { assertEquals("art. 1º", Urn2NomeCompacto.format("art1")) }
     def testLabel_art1_cpt() { assertEquals("art. 1º, caput", Urn2NomeCompacto.format("art1_cpt")) }
     def testLabel_art1_par1u() { assertEquals("art. 1º, parágrafo único", Urn2NomeCompacto.format("art1_par1u")) }
 
     def testLabel_art1_par1u_ali3() { assertEquals("art. 1º, parágrafo único, III", Urn2NomeCompacto.format("art1_par1u_inc3")) }
     def testLabel_art1_par1u_ali3_inc2() { assertEquals("art. 1º, parágrafo único, III, b", Urn2NomeCompacto.format("art1_par1u_inc3_ali2")) }
-    
+
     def testLabel_art2() { assertEquals("art. 2º", Urn2NomeCompacto.format("art2")) }
     def testLabel_art2_cpt() { assertEquals("art. 2º, caput", Urn2NomeCompacto.format("art2_cpt")) }
     def testLabel_art2_cpt_inc1() { assertEquals("art. 2º, I", Urn2NomeCompacto.format("art2_cpt_inc1")) }
@@ -49,7 +49,7 @@ class Uren2NomeCompactoTest extends TestCase {
     def testLabel_art7() { assertEquals("art. 7º", Urn2NomeCompacto.format("art7")) }
     def testLabel_art7_cpt() { assertEquals("art. 7º, caput", Urn2NomeCompacto.format("art7_cpt")) }
     def testLabel_art7_par1() { assertEquals("art. 7º, § 1º", Urn2NomeCompacto.format("art7_par1")) }
-    def testLabel_art7_par2() { assertEquals("art. 7º, § 2º", Urn2NomeCompacto.format("art7_par2")) }  
+    def testLabel_art7_par2() { assertEquals("art. 7º, § 2º", Urn2NomeCompacto.format("art7_par2")) }
 
     def testLabel_art8() { assertEquals("art. 8º", Urn2NomeCompacto.format("art8")) }
     def testLabel_art8_cpt() { assertEquals("art. 8º, caput", Urn2NomeCompacto.format("art8_cpt")) }
@@ -252,7 +252,7 @@ class Uren2NomeCompactoTest extends TestCase {
 
     def testLabel_art36() { assertEquals("art. 36", Urn2NomeCompacto.format("art36")) }
     def testLabel_art36_cpt() { assertEquals("art. 36, caput", Urn2NomeCompacto.format("art36_cpt")) }
-    
+
     def testLabel_art37() { assertEquals("art. 37", Urn2NomeCompacto.format("art37")) }
     def testLabel_art37_cpt() { assertEquals("art. 37, caput", Urn2NomeCompacto.format("art37_cpt")) }
 
@@ -292,9 +292,11 @@ class Uren2NomeCompactoTest extends TestCase {
     def testLabel_tit1_sec1_2_sec3_art1_2_art4_art6_10_tit2_sec1_5() { assertEquals("Seção III do Título I, arts. 1º a 2º, Seção III do Título I, art. 4º e Seção III do Título I, arts. 6º a 10 e Seção I a II do Título I e Seção I a V do Título II", Urn2NomeCompacto.format(List("tit1_sec1", "tit1_sec2", "tit1_sec3", "tit1_sec3_art1", "tit1_sec3_art2", "tit1_sec3_art4", "tit1_sec3_art6", "tit1_sec3_art7", "tit1_sec3_art8", "tit1_sec3_art9", "tit1_sec3_art10", "tit2_sec1", "tit2_sec2", "tit2_sec3", "tit2_sec4", "tit2_sec5"))) }
 
     def testLabel_art9_inc1_4() { assertEquals("art. 9º, I a IV", Urn2NomeCompacto.format(List("art9_inc1", "art9_inc2", "art9_inc3", "art9_inc4"))) }
-    
+
     def testLabel_anx1_art25_27_anx1_art30() { assertEquals("Anexo A, arts. 25 a 27 e Anexo A, art. 30", Urn2NomeCompacto.format(List("anx1_art25", "anx1_art26", "anx1_art27", "anx1_art30"))) }
 
     def testLabel_anx2_tit1_sec1_anx1_art25_27_anx1_art30_anx3_tit5() { assertEquals("Seção I do Título I do Anexo B, Anexo A, arts. 25 a 27 e Anexo A, art. 30 e Título V do Anexo C", Urn2NomeCompacto.format(List("anx2_tit1_sec1", "anx1_art25", "anx1_art26", "anx1_art27", "anx1_art30", "anx3_tit5"))) }
+
+    def testLabel_sec10_sec13() { assertEquals("Seção X e Seção XIII", Urn2NomeCompacto.format(List("sec10", "sec13"))) }
 
 }
