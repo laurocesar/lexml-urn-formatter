@@ -174,7 +174,7 @@ object Urn2NomeCompacto {
   type FormattedComp = (String, String)
 
   val agregadores: Map[String, (String, String, String)] = Map(
-    "prt" -> ("do", "Parte", "Partes"),
+    "prt" -> ("da", "Parte", "Partes"),
     "liv" -> ("do", "Livro", "Livros"),
     "cap" -> ("do", "Capítulo", "Capítulos"),
     "tit" -> ("do", "Título", "Títulos"),
